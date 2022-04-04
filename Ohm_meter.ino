@@ -2,7 +2,7 @@
 int analogPin = 0;
 
 // Values for calculations
-int raw = 0;
+int read = 0;
 int Vin = 5;
 float Vout = 0;
 float R1 = 10000;
@@ -25,7 +25,7 @@ void loop(){
     buffer = (Vin/Vout) - 1;
     R2= R1 * buffer;
     Serial.printf("Vout: %d \n", Vout);
-    Serial.print("R2: %d \n", R2);
+    Serial.printf("R2: %d \n", R2);
     delay(1000);
   }
 }
